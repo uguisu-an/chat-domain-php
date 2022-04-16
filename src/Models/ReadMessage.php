@@ -4,6 +4,9 @@ namespace UguisuAn\Chat\Domain\Models;
 
 use DateTimeInterface;
 
+/**
+ * 既読
+ */
 class ReadMessage
 {
     protected $userId;

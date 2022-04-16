@@ -5,6 +5,9 @@ namespace UguisuAn\Chat\Domain\Models;
 use Exception;
 use InvalidArgumentException;
 
+/**
+ * 会話
+ */
 class Conversation
 {
     protected $id;
@@ -32,21 +35,33 @@ class Conversation
         return array_values($this->participants);
     }
 
+    /**
+     * 参加者を追加する
+     */
     public function addParticipant(UserId $userId)
     {
         $this->participants[$userId->value()] = new Participant($userId);
     }
 
+    /**
+     * 参加者を削除する
+     */
     public function removeParticipant(UserId $userId)
     {
         unset($this->participants[$userId->value()]);
     }
 
+    /**
+     * 参加者を取得する
+     */
     public function getParticipant(UserId $userId): ?Participant
     {
         return $this->participants[$userId->value()] ?? null;
     }
 
+    /**
+     * メッセージを送る
+     */
     public function sendMessage(UserId $userId, string $text): Message
     {
         return new Message($userId, $this->id(), $text);
