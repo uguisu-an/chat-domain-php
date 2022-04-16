@@ -46,4 +46,19 @@ class Message
         }
         $this->id = $id;
     }
+
+    public function userId()
+    {
+        return $this->userId;
+    }
+
+    public function conversationId()
+    {
+        return $this->conversationId;
+    }
+
+    public function body()
+    {
+        return $this->body;
+    }
 }

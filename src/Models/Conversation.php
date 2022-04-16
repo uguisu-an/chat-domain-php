@@ -46,4 +46,9 @@ class Conversation
     {
         return $this->participants[$userId->value()] ?? null;
     }
+
+    public function sendMessage(UserId $userId, string $body): Message
+    {
+        return new Message($userId, $this->id(), $body);
+    }
 }
