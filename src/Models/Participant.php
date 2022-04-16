@@ -11,7 +11,7 @@ class Participant
 
     protected $role;
 
-    public function __construct(UserId $userId, Role $role)
+    public function __construct(UserId $userId, Role $role = null)
     {
         $this->userId = $userId;
         $this->role = $role;
