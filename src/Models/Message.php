@@ -26,7 +26,10 @@ class Message
         $this->text = $text;
     }
 
-    public function readBy(UserId $userId, DateTimeInterface $readAt): ReadMessage
+    /**
+     * 既読をつける
+     */
+    public function markAsReadBy(UserId $userId, DateTimeInterface $readAt): ReadMessage
     {
         return new ReadMessage($userId, $this->id, $readAt);
     }
