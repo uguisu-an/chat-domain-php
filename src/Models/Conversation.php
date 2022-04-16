@@ -38,9 +38,9 @@ class Conversation
     /**
      * 参加者を追加する
      */
-    public function addParticipant(UserId $userId)
+    public function addParticipant(UserId $userId, Role $role)
     {
-        $this->participants[$userId->value()] = new Participant($userId);
+        $this->participants[$userId->value()] = new Participant($userId, $role);
     }
 
     /**

@@ -9,9 +9,12 @@ class Participant
 {
     protected $userId;
 
-    public function __construct(UserId $userId)
+    protected $role;
+
+    public function __construct(UserId $userId, Role $role)
     {
         $this->userId = $userId;
+        $this->role = $role;
     }
 
     public function userId()
