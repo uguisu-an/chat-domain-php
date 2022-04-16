@@ -1,18 +1,20 @@
 {
-    "name": "uguisu_an/chat-domain",
-    "description": "Chat domain models",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "UguisuAn\\ChatDomain\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "ii masamitsu",
-            "email": "ii@entap.co.jp"
-        }
-    ],
-    "require": {}
+  "name": "uguisu_an/chat-domain",
+  "description": "Chat domain models",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "UguisuAn\\ChatDomain\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "ii masamitsu",
+      "email": "ii@entap.co.jp"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  }
 }
