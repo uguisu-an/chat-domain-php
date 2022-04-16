@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "UguisuAn\\ChatDomain\\": "src/"
+            "UguisuAn\\Chat\\Domain\\Models": "src/"
         }
     },
     "authors": [

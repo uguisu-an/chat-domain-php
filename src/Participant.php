@@ -1,6 +1,6 @@
 <?php
 
-namespace Chat\Domain\Models;
+namespace UguisuAn\Chat\Domain\Models;
 
 /**
  * 会話の参加者
