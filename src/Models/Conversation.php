@@ -7,8 +7,6 @@ use InvalidArgumentException;
 
 class Conversation
 {
-    use HasId;
-
     protected $id;
 
     protected $participants;
