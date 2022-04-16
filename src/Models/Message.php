@@ -17,13 +17,13 @@ class Message
 
     protected $conversationId;
 
-    protected $body;
+    protected $text;
 
-    public function __construct(UserId $userId, ConversationId $conversationId, string $body)
+    public function __construct(UserId $userId, ConversationId $conversationId, string $text)
     {
         $this->userId = $userId;
         $this->conversationId = $conversationId;
-        $this->body = $body;
+        $this->text = $text;
     }
 
     public function readBy(UserId $userId, DateTimeInterface $readAt): ReadMessage
@@ -57,8 +57,8 @@ class Message
         return $this->conversationId;
     }
 
-    public function body()
+    public function text()
     {
-        return $this->body;
+        return $this->text;
     }
 }

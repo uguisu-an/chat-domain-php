@@ -18,6 +18,6 @@ class MessageTest extends TestCase
 
         $this->assertEquals('conversation', $message->conversationId()->value());
         $this->assertEquals('user', $message->userId()->value());
-        $this->assertEquals('hello world', $message->body());
+        $this->assertEquals('hello world', $message->text());
     }
 }
