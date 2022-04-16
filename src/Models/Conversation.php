@@ -14,7 +14,7 @@ class Conversation
     /**
      * @param Participant[] $participants 参加者
      */
-    public function __construct(array $participants)
+    public function __construct(array $participants = [])
     {
         $this->participants = $participants;
     }
@@ -33,5 +33,15 @@ class Conversation
             throw new InvalidArgumentException('ID is already set');
         }
         $this->id = $id;
+    }
+
+    public function addParticipant(UserId $userId)
+    {
+        $this->participants[] = new Participant($userId);
+    }
+
+    public function participants(): array
+    {
+        return $this->participants;
     }
 }
