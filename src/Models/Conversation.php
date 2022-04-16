@@ -27,6 +27,11 @@ class Conversation
         $this->id = $id;
     }
 
+    public function participants(): array
+    {
+        return array_values($this->participants);
+    }
+
     public function addParticipant(UserId $userId)
     {
         $this->participants[$userId->value()] = new Participant($userId);
