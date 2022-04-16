@@ -9,15 +9,7 @@ class Conversation
 {
     protected $id;
 
-    protected $participants;
-
-    /**
-     * @param Participant[] $participants 参加者
-     */
-    public function __construct(array $participants = [])
-    {
-        $this->participants = $participants;
-    }
+    protected $participants = [];
 
     public function id(): ConversationId
     {
@@ -37,11 +29,16 @@ class Conversation
 
     public function addParticipant(UserId $userId)
     {
-        $this->participants[] = new Participant($userId);
+        $this->participants[$userId->value()] = new Participant($userId);
     }
 
-    public function participants(): array
+    public function removeParticipant(UserId $userId)
     {
-        return $this->participants;
+        unset($this->participants[$userId->value()]);
+    }
+
+    public function getParticipant(UserId $userId): ?Participant
+    {
+        return $this->participants[$userId->value()] ?? null;
     }
 }

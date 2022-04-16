@@ -13,4 +13,9 @@ class Participant
     {
         $this->userId = $userId;
     }
+
+    public function userId()
+    {
+        return $this->userId;
+    }
 }
